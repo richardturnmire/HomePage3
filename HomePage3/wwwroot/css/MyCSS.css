@@ -1,0 +1,82 @@
+﻿
+body {
+    background-color: lightsteelblue;
+    padding-top: .15rem;
+    font-size: x-large;
+}
+
+.nav {
+    font-size: xx-large;
+    margin: 0;
+    padding-bottom: 3px;
+}
+
+.navbar-header {
+    font-size: x-large;
+    color: whitesmoke;
+}
+
+.navbar {
+    color: whitesmoke;
+    margin-bottom: 10px;
+    font-size: x-large;
+    padding-bottom: 3px;
+}
+
+.navbar-brand {
+    color: whitesmoke;
+    font-size: x-large;
+}
+
+.nav-item .active {
+    border-bottom: black;
+    border-bottom-width: 2px;
+}
+
+.nav-item {
+    border-bottom-width: 0;
+}
+
+.nav-link {
+    color: whitesmoke;
+    font-size: xx-large;
+}
+
+a {
+    color: black;
+}
+
+.body-content {
+    margin-top: 20px;
+}
+
+.panel {
+    height: auto;
+}
+
+.socialbutton {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+}
+
+.navbar-nav li {
+    font-size: x-large;
+}
+
+.container-even {
+    background-color: aquamarine;
+    padding: 10px;
+    font-size: x-large;
+}
+
+.container-odd {
+    background-color: bisque;
+    padding: 10px;
+    font-size: x-large;
+}
+
+.container-banner {
+    padding: 10px;
+    font-size: x-large;
+}
