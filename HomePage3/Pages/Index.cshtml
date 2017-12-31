@@ -4,38 +4,44 @@
     ViewData["Title"] = "Home page";
 }
 <div class="container">
-    <div class="row">
-        <div class="col-4">
-            <img src="~/images/Profile.jpg" alt="Picture of Richard Turnmire" class="img-fluid img-thumbnail" width="300px" />
-        </div>
-        <div class="col-5">
+    <div class="card row">
+        <div class="card-header row">
+            <div class="card-img col-3">
+                <img src="~/images/Profile.jpg" alt="Picture of Richard Turnmire" class="img-fluid img-thumbnail" style="width: 100%;"/>
+            </div>
 
-        </div>
-        <div class="col-3">
-            <div class="card">
-                <div class="card-header">
-                    <p>Website: <a>www.richardturnmire.com</a></p>
-                    <p>Cell: 502-417-3849</p>
-                    <p>Email: richard@richardturnmire.com</p>
-                </div>
-
-                <div class="card-footer">
-                    <p>Social Links</p>
-                    <div class="row">
-                        <div class="col-md-3 socialbutton" style="height:75px">
-                            <a href="http://www.linkedin.com/in/richardturnmire">
-                                <img src="images/In-2C-48px-TM.png" alt="Richard's LinkedIn profile" class="img-fluid">
-                            </a>
-
+            <div class="col-9">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-3 text-right">Website:</div>
+                            <div class="col-md"><a>www.richardturnmire.com</a></div>
                         </div>
-                        <div class="col-md-3 socialbutton" style="height:75px">
-                            <a href="https://twitter.com/richardturnmire?ref_src=twsrc%5Etfw">
-                                <img src="images/Twitter_Social_Icon_Square_Color.png" alt="Richard's Twitter profile" class="img-fluid" style="height:48px;">
-                            </a>
+                        <div class="row">
+                            <div class="col-md-3 text-right">Cell:</div>
+                            <div class="col-md">502-417-3849</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 text-right">Email:</div>
+                            <div class="col-md">richard@richardturnmire.com</div>
+                        </div>
+                        <hr class="mt-5"/>
+                        <div class="row">
+                            <div class="col-md-3 text-right">Social Links:</div>
+                            <div class="col">
+                                <a class="card-link" href="http://www.linkedin.com/in/richardturnmire">
+                                    <img src="images/In-2C-48px-TM.png" alt="Richard's LinkedIn profile" class="img-fluid socialbutton">
+                                </a>
+                                <a class="card-link" href="https://twitter.com/richardturnmire?ref_src=twsrc%5Etfw">
+                                    <img src="images/Twitter_Social_Icon_Square_Color.png" alt="Richard's Twitter profile" class="img-fluid socialbutton">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="card-body"></div>
+        <div class="card-footer"></div>
     </div>
 </div>

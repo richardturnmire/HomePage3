@@ -4,43 +4,49 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] Richard Turnmire</title>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>   
 
+    @*<script>
+            function resizeIframe(obj) {
+                obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+            }
+        </script>*@
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
-        <link rel="stylesheet" href="~/css/MyCSS.css"  />
+        <link rel="stylesheet" href="~/css/MyCSS.css" />
 
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" /> 
-        <link rel="stylesheet" href="~/css/MyCSS.css"  />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/MyCSS.css" />
     </environment>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
 </head>
 <body>
-    <div class="container-fluid body-content">
-        <div class="container sticky-top p-0">
-            <nav class="navbar navbar-expand-lg  bg-primary m-0">
+    <div class="container-fluid body-content mt-0">
+        <div class="container sticky-top p-0 c">
+            <nav class="navbar navbar-expand-md navbar-light bg-info  m-0">
 
                 <a asp-page="/Index" class="navbar-brand">
-                    Richard Turnmire
-                    <p>Software Developer for Hire</p>
+                    <h2>Richard Turnmire </h2>
+                    <h4>Software Developer for Hire</h4>
                 </a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarList" aria-controls="navbarList" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="fas fa-bars fa-3x"></span>
                 </button>
 
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav mr-auto">
+                <div class="collapse navbar-collapse" id="navbarList">
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item active text-xl-center"><a class="nav-link" asp-page="/Index">Home</a></li>
                         <li class="nav-item text-xl-center"><a class="nav-link" asp-page="/About">About</a></li>
                         <li class="nav-item text-xl-center"><a class="nav-link" asp-page="/Resume">Resume</a></li>
                         <li class="nav-item text-xl-center"><a class="nav-link" asp-page="/Contact">Contact</a></li>
-                        <li class="nav-item text-xl-center"><a class="nav-link" asp-page="/Projects">Projects</a></li>
+                        <li class="nav-item text-xl-center"><a class="nav-link" asp-page="/Projects">Projects</a></li> 
+                        @*<li class="nav-item text-xl-center"><a class="nav-link" asp-page="/PDFDisplay">PDF Display</a></li>*@
                     </ul>
                 </div>
             </nav>

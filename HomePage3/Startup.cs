@@ -36,6 +36,16 @@ namespace HomePage3
             {
                 app.UseExceptionHandler("/Error");
             }
+            
+            app.Use(async (context, next) =>
+            {
+                context.Response.Headers.Add(
+                    "Content-Security-Policy",
+                    "frame-src 'self' https: ; " +
+                    "img-src 'self'");
+
+                await next();
+            });
 
             app.UseStaticFiles();
 

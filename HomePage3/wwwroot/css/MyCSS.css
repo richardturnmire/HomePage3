@@ -58,6 +58,7 @@ a {
     height: 50px;
     width: 50px;
     border-radius: 10px;
+   margin-right: 5px;
 }
 
 .navbar-nav li {
@@ -66,17 +67,21 @@ a {
 
 .container-even {
     background-color: aquamarine;
-    padding: 10px;
     font-size: x-large;
-}
+    }
 
 .container-odd {
     background-color: bisque;
-    padding: 10px;
-    font-size: x-large;
+   font-size: x-large;
+    
 }
 
 .container-banner {
-    padding: 10px;
-    font-size: x-large;
+    font-size: 3rem;
+    font-weight: bolder;
 }
+
+.card-body ul > li {
+    padding-bottom: 1.5rem;
+}
+
