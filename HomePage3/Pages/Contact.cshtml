@@ -1,19 +1,85 @@
 ﻿@page
-@model ContactModel
+@using HomePage3.Pages
+@model HomePage3.Pages.ContactModel
 @{
     ViewData["Title"] = "Contact";
-} 
+}
 <div class="container">
-    <h2>@ViewData["Title"]</h2>
-    <h3>@Model.Message</h3>
+    <div class="row mt-1">
+        <div class="col-4">
+            <address>
+                Louisville, KY 40245<br />
+                <abbr title="Phone">P:</abbr>
+                502.417.3849
+            </address>
 
-    <address>
-        Louisville, KY 40245<br />
-        <abbr title="Phone">P:</abbr>
-        502.417.3849
-    </address>
+            <address>
+                <strong>Support:</strong> <a href="mailto:richard@richardturnmire.com">richard@richardturnmire.com</a><br />
+            </address>
+        </div>
 
-    <address>
-        <strong>Support:</strong> <a href="mailto:richard@richardturnmire.com">richard@richardturnmire.com</a><br />
-    </address>
+        <div class="offset-1 col-7">
+            <div id="contactForm form-horizontal my-3">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                    <div class="form-group">
+                        <div class="form-group form-row">
+                            <div class="col-md-2">
+                                @Html.LabelFor(model => model.Name, null, new { @class = "col-form-label-lg" })
+                            </div>
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Name, null, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger bg-warning" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-2">
+                                @Html.LabelFor(model => model.Email, null, new { @class = "col-form-label-lg" })
+                            </div>
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.Email, null, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-2">
+                                @Html.LabelFor(model => model.Phone, null, new { @class = "col-form-label-lg" })
+                            </div>
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.Phone, null, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-4">
+                            <div class="col-sm-2">
+                                @Html.LabelFor(model => model.Subject, null, new { @class = "col-form-label-lg" })
+                            </div>
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.Subject, null, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-2">
+                                @Html.LabelFor(model => model.Message, null, new { @class = "col-form-label-lg" })
+                            </div>
+                            <div class="col-sm-10">
+                                @Html.TextAreaFor(model => model.Message, 6, 50, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
 </div>

@@ -4,44 +4,59 @@
     ViewData["Title"] = "Home page";
 }
 <div class="container">
-    <div class="card row">
-        <div class="card-header row">
-            <div class="card-img col-3">
-                <img src="~/images/Profile.jpg" alt="Picture of Richard Turnmire" class="img-fluid img-thumbnail" style="width: 100%;"/>
-            </div>
+    <div class="row mt-1">
 
-            <div class="col-9">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="row">
-                            <div class="col-md-3 text-right">Website:</div>
-                            <div class="col-md"><a>www.richardturnmire.com</a></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3 text-right">Cell:</div>
-                            <div class="col-md">502-417-3849</div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3 text-right">Email:</div>
-                            <div class="col-md">richard@richardturnmire.com</div>
-                        </div>
-                        <hr class="mt-5"/>
-                        <div class="row">
-                            <div class="col-md-3 text-right">Social Links:</div>
-                            <div class="col">
-                                <a class="card-link" href="http://www.linkedin.com/in/richardturnmire">
-                                    <img src="images/In-2C-48px-TM.png" alt="Richard's LinkedIn profile" class="img-fluid socialbutton">
-                                </a>
-                                <a class="card-link" href="https://twitter.com/richardturnmire?ref_src=twsrc%5Etfw">
-                                    <img src="images/Twitter_Social_Icon_Square_Color.png" alt="Richard's Twitter profile" class="img-fluid socialbutton">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+        <div class="card col-3">
+            <div class="card-header">
+                <div class="card-img ">
+                    <img src="~/images/Profile.jpg" alt="Picture of Richard Turnmire" class="img-fluid img-thumbnail" style="width: 100%;" />
+                </div>
+            </div> 
+            <div class="card-body"></div>
+            <div class="card-footer">
+                <div class="card-title">Social links</div>
+                <div class="row">
+                    <a class="card-link" href="http://www.linkedin.com/in/richardturnmire">
+                        <img src="images/In-2C-48px-TM.png" alt="Richard's LinkedIn profile" class="img-fluid socialbutton">
+                    </a>
+                    <a class="card-link" href="https://twitter.com/richardturnmire?ref_src=twsrc%5Etfw">
+                        <img src="images/Twitter_Social_Icon_Square_Color.png" alt="Richard's Twitter profile" class="img-fluid socialbutton">
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="card-body"></div>
-        <div class="card-footer"></div>
+
+
+        <div class="card col">
+            <div class="card-header p-1">
+                <div class="row">
+                    <div class="col-md-3 text-right">Website:</div>
+                    <div class="col-md"><a>www.richardturnmire.com</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 text-right">Cell:</div>
+                    <div class="col-md">502-417-3849</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 text-right">Email:</div>
+                    <div class="col-md">richard@richardturnmire.com</div>
+                </div>
+            </div>
+            <div class="card-footer mt-auto">
+                <hr class="mt-5" />
+                <div class="row">
+                    <div name="todaysQuote">
+                        <blockquote class="blockquote">
+                            <script type="text/javascript" src="https://www.brainyquote.com/link/quotebr.js"></script>
+                        </blockquote>
+                        <small><i><a href="https://www.brainyquote.com/quote_of_the_day" target="_blank" rel="nofollow">more Quotes</a></i></small>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
     </div>
+
 </div>
+

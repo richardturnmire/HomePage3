@@ -1,6 +1,13 @@
-﻿
+﻿:root {
+    --main-color: #42a2b2;
+    --card-link: #345;
+    --card-footer: #3e3e3e;
+}
 body {
-    background-color: lightsteelblue;
+    background: #3E5151;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #DECBA4, #3E5151); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     padding-top: .15rem;
     font-size: x-large;
 }
@@ -66,12 +73,20 @@ a {
 }
 
 .container-even {
-    background-color: aquamarine;
+    background: #B2FEFA;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
     font-size: x-large;
     }
 
 .container-odd {
-    background-color: bisque;
+    background: #CC95C0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
    font-size: x-large;
     
 }
@@ -80,8 +95,60 @@ a {
     font-size: 3rem;
     font-weight: bolder;
 }
+.card-header {
+    background: #acb6e5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #86fde8, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+    margin: 0;
+    padding: 0;
+}
 .card-body ul > li {
     padding-bottom: 1.5rem;
 }
+
+.card-footer {
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: black;
+    /*background-image: url("/images/Lizard.jpg");*/
+}
+
+.card-link {
+    background-color: var(--light);
+    color: var(--cyan);
+}
+
+.card-img {
+    margin: 0;
+    padding: 0;
+}
+
+#contactForm {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    width: 100%;
+}
+
+    #contactForm .form-group {
+        margin-bottom: .25rem;
+        width: 100%;
+    }
+    #contactForm input {
+        font: inherit;
+        max-width: 2.5rem;
+        width: 100%;
+    }
+
+    #contactForm textarea {
+        max-width: 4.0rem;
+        min-width: 2.5rem;
+        height: auto;
+        font: inherit;
+        width: 100%;
+    }
+
+
 
