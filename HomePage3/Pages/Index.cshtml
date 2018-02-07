@@ -1,62 +1,84 @@
 ﻿@page
-@model IndexModel
+@using HomePage3.Pages
+@model HomePage3.Pages.IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
-<div class="container">
-    <div class="row mt-1">
-
-        <div class="card col-3">
-            <div class="card-header">
-                <div class="card-img ">
-                    <img src="~/images/Profile.jpg" alt="Picture of Richard Turnmire" class="img-fluid img-thumbnail" style="width: 100%;" />
-                </div>
-            </div> 
-            <div class="card-body"></div>
-            <div class="card-footer">
-                <div class="card-title">Social links</div>
-                <div class="row">
-                    <a class="card-link" href="http://www.linkedin.com/in/richardturnmire">
-                        <img src="images/In-2C-48px-TM.png" alt="Richard's LinkedIn profile" class="img-fluid socialbutton">
-                    </a>
-                    <a class="card-link" href="https://twitter.com/richardturnmire?ref_src=twsrc%5Etfw">
-                        <img src="images/Twitter_Social_Icon_Square_Color.png" alt="Richard's Twitter profile" class="img-fluid socialbutton">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="card col">
-            <div class="card-header p-1">
-                <div class="row">
-                    <div class="col-md-3 text-right">Website:</div>
-                    <div class="col-md"><a>www.richardturnmire.com</a></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 text-right">Cell:</div>
-                    <div class="col-md">502-417-3849</div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 text-right">Email:</div>
-                    <div class="col-md">richard@richardturnmire.com</div>
-                </div>
-            </div>
-            <div class="card-footer mt-auto">
-                <hr class="mt-5" />
-                <div class="row">
-                    <div name="todaysQuote">
-                        <blockquote class="blockquote">
-                            <script type="text/javascript" src="https://www.brainyquote.com/link/quotebr.js"></script>
-                        </blockquote>
-                        <small><i><a href="https://www.brainyquote.com/quote_of_the_day" target="_blank" rel="nofollow">more Quotes</a></i></small>
+ 
+    <div id="homepage" class="container  my-auto btn-light">
+        <div class="row mt-1 py-2 px-0 mx-0">
+            <div class="card col-md-4 py-2">
+                <div class="card-header">
+                    <div class="card-img ">
+                        <img src="~/images/Profile.jpg" alt="Picture of Richard Turnmire" class="img-fluid img-thumbnail" style="width: 100%;" />
                     </div>
                 </div>
-
+                <div class="card-body   mx-0 pr-1">
+                    <div class="row">
+                        <span title="Richard's phone number">
+                            <a href="tel:+15024173849" alt="Link to Richard's phone number">
+                                <i class="fas fa-phone fa-2x"></i>
+                                (502) 417-3849
+                            </a>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span title="Open email client to send message to Richard">
+                            <a href="mailto:richard@richarturnmire.com" target="_top" alt="Link to create email to send to Richard" aria-describedby="Link to create email to send to Richard">
+                                <i class="fas fa-envelope fa-2x"></i>
+                                richard@richardturnmire.com
+                            </a>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span title="Link to Richard's LinkedIn profile">
+                            <a href="http://www.linkedin.com/in/richardturnmire" alt="Link to Richard's LinkedIn profile" aria-describedby="Link to Richard's LinkedIn profile">
+                                <i class="fab fa-linkedin fa-2x"></i>
+                                LinkedIn
+                            </a>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span title="Link to Richard's Twitter profile">
+                            <a href="https://twitter.com/richardturnmire?ref_src=twsrc%5Etfw" alt="Richard's Twitter profile" aria-describedby="Link to Richard's Twitter profile">
+                                <i class="fab fa-twitter fa-2x"></i>
+                                Twitter
+                            </a>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <span title="Link to Richard's GitHub repository">
+                            <a href="http://www.github.com/richardturnmire" alt="Link to downloadable Richard's GitHub repository" aria-describedby="Link to Richard's GitHub repository">
+                                <i class="fab fa-github-alt fa-2x"></i>
+                                GitHub
+                            </a>
+                        </span>
+                    </div>
+                </div>
             </div>
 
+            <div class="card col-md py-2">
+                <div class="card-header p-1 h-50">
+                    Hello and welcome to my website.
+                </div>
+
+                <div class="card-footer mt-auto">
+                    <hr />
+                    <div class="row">
+                        <div name="todaysQuote">
+                            <blockquote class="blockquote">
+                                <script type="text/javascript" src="https://www.brainyquote.com/link/quotebr.js"></script>
+                            </blockquote>
+                            <small><i><a href="https://www.brainyquote.com/quote_of_the_day" target="_blank" rel="nofollow">more Quotes</a></i></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-3 marquee ">
+                <h4 class="d-none d-lg-block">This site is a work in progress. Please check back regularly for updates.</h4>
+                <h5 class="d-block d-lg-none d-xl-none">This site is a work in progress. Please check back regularly for updates.</h5>
+            </div>
         </div>
     </div>
-
-</div>
-
+ 

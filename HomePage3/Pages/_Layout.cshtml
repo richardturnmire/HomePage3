@@ -1,98 +1,104 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>@ViewData["Title"] Richard Turnmire</title>
 
-    @*<script>
-            function resizeIframe(obj) {
-                obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-            }
-        </script>*@
     <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-        <link rel="stylesheet" href="~/css/MyCSS.css" />
-
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     </environment>
+
     <environment exclude="Development">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-        <link rel="stylesheet" href="~/css/MyCSS.css" />
     </environment>
+
+    <link rel="stylesheet" href="~/css/Shards/shards.min.css" />
+    <link rel="stylesheet" href="~/css/MyCSS.css" />
+
     <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
-   
+    <script>
+        FontAwesomeConfig = { searchPseudoElements: true };
+    </script>
+
 </head>
-<body>
-    <div class="container-fluid body-content mt-0">
-        <div class="container sticky-top p-0 c">
-            <nav class="navbar navbar-expand-md navbar-light bg-info  m-0">
 
-                <a asp-page="/Index" class="navbar-brand">
-                    <h2>Richard Turnmire </h2>
-                    <h4>Software Developer for Hire</h4>
-                </a>
+<body class="container-fluid body-content mx-0 px-0  btn-light">
+    <nav class="container navbar nav-pills navbar-expand-md p-0 navbar-fixed-top rounded-bottom">
+        <button class="navbar-toggler ml-4 pl-2 py-1 hidden-sm-up pull-left" type="button" data-toggle="collapse" data-target="#navbarList" aria-controls="navbarList" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fas fa-bars fa-3x pull-left"></span>
+        </button>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarList" aria-controls="navbarList" aria-expanded="false" aria-label="Toggle navigation">
-                   <span class="fas fa-bars fa-3x"></span>
-                </button>
+        <a asp-page="/Index" class="navbar-brand py-0 mt-1">
+            <h4 class="pb-0 mt-1">Richard Turnmire</h4> 
+            <h5 class="pb-0 mt-1">Software Developer for Hire</h5>
+        </a>
 
-                <div class="collapse navbar-collapse" id="navbarList">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item active text-xl-center"><a class="nav-link" asp-page="/Index">Home</a></li>
-                        <li class="nav-item text-xl-center"><a class="nav-link" asp-page="/About">About</a></li>
-                        <li class="nav-item text-xl-center"><a class="nav-link" asp-page="/Resume">Resume</a></li>
-                        <li class="nav-item text-xl-center"><a class="nav-link" asp-page="/Contact">Contact</a></li>
-                        <li class="nav-item text-xl-center"><a class="nav-link" asp-page="/Projects">Projects</a></li> 
-                        @*<li class="nav-item text-xl-center"><a class="nav-link" asp-page="/PDFDisplay">PDF Display</a></li>*@
-                    </ul>
-                </div>
+        <div class="collapse navbar-collapse pull-left p-3" id="navbarList">
+            <nav class="nav nav-outlined-pills mx-auto justify-content-between" id="pills-tab">
+                <a class="nav-link text-center" asp-page="/Index" id="pills-home-tab"
+                   aria-controls="pills-home" aria-selected="true">Home</a>
+                <a class="nav-link text-center" asp-page="/Resume" id="pills-resume-tab"
+                   aria-controls="pills-resume" aria-selected="false">Resume</a>
+                <a class="nav-link text-center" asp-page="/Projects" id="pills-projects-tab"
+                   aria-controls="pills-projects" aria-selected="false">Projects</a>
+                <a class="nav-link text-center" asp-page="/Favorites" id="pills-favorites-tab"
+                   aria-controls="pills-favorites" aria-selected="false">Favorites</a>
+                <a class="nav-link text-center" asp-page="/Contact" id="pills-contact-tab"
+                   aria-controls="pills-contact" aria-selected="false">Contact</a>
             </nav>
         </div>
-        @RenderBody()
+    </nav>
+
+    @RenderBody()
+
+    <footer class="rounded-bottom">
         <hr />
-        <footer>
-            <p>&copy; 2017 - Richard Turnmire</p>
-        </footer>
-    </div>
+        <p>&copy; 2018 - Richard Turnmire</p>
+    </footer>
 
     <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
-                crossorigin="anonymous"
-                integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh">
-        </script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-        >
-        </script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/lib/jquery/jquery-3.2.1.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     </environment>
     <environment exclude="Development">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
                 asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-               >
+                crossorigin="anonymous">
         </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
-                crossorigin="anonymous"
-                >
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous">
         </script>
-
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
                 asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
                 asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-               >
+                crossorigin="anonymous">
         </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
+
+    <script src="~/js/site.min.js" asp-append-version="true"></script>
+    <script src="~/js/Shards/shards.min.js"></script>
+    <script type="text/javascript">
+        //   jQuery(document).ready(function($){
+        $(document).ready(function () {
+            var url = window.location.href;
+
+            // Will only work if string in href matches with location
+            $('.nav a[href="' + url + '"]').addClass('active');
+
+            // Will also work for relative and absolute hrefs
+            $('.nav a').filter(function () {
+                return this.href == url;
+            }).addClass('active');
+        });
+
+    </script>
+
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>
