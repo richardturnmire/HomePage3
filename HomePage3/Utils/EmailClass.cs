@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using MimeKit;
@@ -24,9 +22,9 @@ namespace HomePage3.Utils
             CcAddresses = new List<EmailAddress>();
         }
  
-        public List<EmailAddress> ToAddresses { get; set; }
-        public List<EmailAddress> FromAddresses { get; set; }
-        public List<EmailAddress> CcAddresses {get; set; }
+        public List<EmailAddress> ToAddresses { get; }
+        public List<EmailAddress> FromAddresses { get; }
+        public List<EmailAddress> CcAddresses {get; }
         
         public string Subject { get; set; }
         public string Content { get; set; }

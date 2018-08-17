@@ -1,305 +1,424 @@
 ﻿@page
-@model HomePage3.Pages.ProjectsModel
-@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
- 
-    <div id="projects" class="container-fluid">
-        <div class="row pt-3">
-            <nav id="navSide" class="navbar bg-light float-left col-md-2 col-sm-4 nav-outlined-pills justify-content-start" style="position: relative; top: 0; height: auto; align-content: flex-start;">
-
-                <a class="nav-link nav-pills w-100" href="#cardGuildQuest"
-                   data-toggle="collapse" data-target="#cardGuildQuest">GuildQuest</a>
-
-                <a class="nav-link nav-pills w-100" href="#cardHomePage"
-                   data-toggle="collapse" data-target="#cardHomePage">HomePage</a>
-
-                <a class="nav-link nav-pills w-100" href="#cardHotel"
-                   data-toggle="collapse" data-target="#cardHotel">Hotel Reservation</a>
-
-                @*<a class="nav-link nav-pills w-100" href="#cardHotel2"
-                       data-toggle="collapse" data-target="#cardHotel">Hotel Reservation</a>
-
-                    <a class="nav-link nav-pills w-100" href="#cardHotel3"
-                       data-toggle="collapse" data-target="#cardHotel">Hotel Reservation</a>
-
-                    <a class="nav-link nav-pills w-100" href="#cardHotel4"
-                       data-toggle="collapse" data-target="#cardHotel">Hotel Reservation</a>*@
-            </nav>
-
-            <div class="bg-light col" data-spyx="scroll" data-target="#navSide" data-spy="affix" data-offset-top="205">
-
-                <div id="cardGuildQuest" class="row collapse project">
-                    <div class="card card-danger-outline w-100 mx-0 px-0">
-                        <div class="card-header">
-                            <div class="row px-0 mx-0">
-                                <div class="col-md-4">
-                                    <div class="figure card-img">
-                                        <img class="figure-img img-fluid img-thumbnail" src="~/images/GuildQuest.png" alt="SHL-CEB logo" />
-                                    </div>
-                                    <div class="card-title">
-                                            <h3>Guild Quest</h3>
-                                        </div>
-                                </div>
-                                
-                                <div class="card-text col-md" style="font-weight: 400;">
-                                    <p>
-                                        Based on a project that I worked on while attending The Software Guild.
-                                        The original project was developed using .Net 4.5.2 and Bootstrap 3.
-                                    </p>
-                                    <p>
-                                        The current project is using .Net 4.7.1 and Bootstrap 4. Since the default MVC template uses Bootstrap 3, I had to convert it to Bootstrap 4.
-                                    </p>
-                                    <p>
-                                        This project is still a work in progress and has not been optimized for mobile platforms.<br />
-                                        It is best viewed from a laptop or desktop.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body py-0 px-4">
-                            <div class="row">
-                                <div class="card col-md rounded">
-                                    <div class="card-header text-center projectheader lighter">
-                                        <div class="card-title h4">Features</div>
-                                    </div>
-                                    <div class="card-body p-2 projectfeatures">
-                                        <div class="row flex-wrap" style="font-weight: 500;">
-                                            <div class="col-md-6">ASP.Net MVC</div>
-                                            <div class="col-md-6">ASP.Net API</div>
-                                            <div class="col-md-6">Entity Framework 6.2</div>
-                                            <div class="col-md-6">Bootstrap 4.0</div>
-                                            <div class="col-md-6">HTML5/CSS3/jQuery</div>
-                                            <div class="col-md-6">SQL Server 2016</div>
-                                            <div class="col-md-6">Linq</div>
-                                            <div class="col-md-6">Twilio - used for two party authenication</div>
-                                            <div class="col-md-6">Microsoft Identity</div>
-                                            <div class="col-md-6">CKEditor - inline text editor</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer text-black">
-                            <div class="btn-group-lg">
-                                <a class="btn"
-                                   href="https://github.com/richardturnmire/GuildQuest">
-                                    Source on GitHub
-                                </a>
-                                <a class="btn" name="liveDemo1" id="liveDemo1"
-                                   href="http://guildquest.richardturnmire.com" target="_blank">
-                                    Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="cardHomePage" class="row collapse project">
-                    <div class="card  mb-4 w-100 mx-0 px-0">
-                        <div class="card-header">
-                            <div class="row px-0 mx-0">
-                                <div class="col-md-4">
-                                    <div class="figure card-img">
-                                        <img class="figure-img img-fluid img-thumbnail" src="~/images/HomePage.png" alt="image of Home Page" />
-                                    </div>
-                                    <div class="card-title">
-                                        <h3>Home Page</h3>
-                                    </div>
-                                </div>
-                               
-                                <div class="card-text col-md-4" style="font-weight: 400;">
-                                    <p>
-                                        This website was developed using ASP.Net Core 2 and Bootstrap 4<br />
-                                        Converted the BootStrap 3 based Visual Studio template to BootStrap 4.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body py-0 px-4">
-                            <div class="row">
-                                <div class="card col-md rounded">
-                                    <div class="card-header text-center projectheader lighter">
-                                        <div class="card-title h4">Features</div>
-                                    </div>
-                                    <div class="card-body p-2 projectfeatures">
-                                        <div class=" row flex-wrap" style="font-weight: 500;">
-                                            <div class="col-md-6">ASP.Net Core 2.0</div>
-                                            <div class="col-md-6">Razor Pages</div>
-                                            <div class="col-md-6">User Secrets - for storing development secrets*</div>
-                                            <div class="col-md-6">Azure Key Vault - for storing production secrets*</div>
-                                            <div class="col-md-6">Mailkit - for sending emails</div>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer m-0 bt-1">
-                                        <div class="small">* Secrets are api keys, passwords, etc.</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <div class="btn-group-lg">
-                                <a class="btn" href="https://github.com/richardturnmire/HomePage3">Source on GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="cardHotel" class="row collapse project">
-                    <div class="card mb-4 w-100  mx-0 px-0  ">
-                        <div class="card-header">
-                            <div class="row px-0 mx-0">
-                                <div class="col-md-4">
-                                    <div class="figure card-img">
-                                        <img class="figure-img img-fluid img-thumbnail" src="~/images/Hotel Reservations.png" alt="SHL-CEB logo" />
-                                    </div>
-                                    <div class="card-title">
-                                        <h3>Hotel Reservation</h3>
-                                    </div>
-                                </div>
-                               
-                                <div class="card-text col-md-4" style="font-weight: 400;">
-                                    <p>
-                                        This is an example of a SQL Server database to be used
-                                        by a hotel reservation system.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body py-0 px-4">
-                            <div class="row">
-                                <div class="card col-md rounded" >
-                                    <div class="card-header text-center projectheader lighter">
-                                        <div class="card-title h4">Features</div>
-                                    </div>
-                                    <div class="card-body p-2 projectfeatures">
-                                        <div class="row flex-wrap" style="font-weight: 500;">
-                                            <div class="col-md-6">SQL Server 2016</div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer   text-black">
-                            <div class="row btn-group-lg">
-                                <a class="btn" href="https://github.com/richardturnmire/HotelReservationSystem" role="button">Source on GitHub</a>
-
-                                <button name="button1" id="button1" type="button" class="btn"
-                                        data-toggle="collapse" data-target="#erdIframe1">
-                                    High Level ERD
-                                    <i class="fa fa-angle-right d-inline-block" data-fa-mask="fas fa-circle"></i>
-                                </button>
-
-                                <button name="button2" id="button2" type="button" class="btn"
-                                        data-toggle="collapse" data-target="#erdIframe2">
-                                    Room Level ERD
-                                    <i class="fa fa-angle-right" data-fa-mask="fas fa-circle"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+@model ProjectsModel
 
 
-                </div>
+<main id="projects" class=" view full-bg-img  pt-1 mt-5">
+
+
+  <nav id="navSide" class="position-relative list-unstyled btn-group-vertical light-blue float-left justify-content-start">
+
+    <a class="h4 waves-effect active btn btn-lg w-100 ml-0" href="#cardGuildQuest"
+       data-toggle="collapse" data-target="#cardGuildQuest">GuildQuest</a>
+
+    <a class="h4 waves-effect btn btn-lg w-100" href="#cardAngularGuildQuest"
+       data-toggle="collapse" data-target="#cardAngularGuildQuest">Angular GuildQuest</a>
+
+    <a class="h4 waves-effect btn btn-lg w-100" href="#cardHomePage"
+       data-toggle="collapse" data-target="#cardHomePage">HomePage</a>
+
+    <a class="h4 waves-effect btn btn-lg w-100" href="#cardHotel"
+       data-toggle="collapse" data-target="#cardHotel">Hotel Reservation</a>
+
+  </nav>
+  @*<div class="sidenav-bg mask-strong deep-purple lighten-4"></div>*@
+
+
+  <!--/. Sidebar navigation -->
+  <div class="curtain" id="curtain">
+    <div class="curtain__wrapper">
+      <input type="checkbox" name="curtainToggle" id="curtainToggle">
+
+      <div id="panelLeft" class="curtain__panel curtain__panel--left deep-purple lighten-1">
+        <h1>Wa</h1>
+      </div> <!-- curtain__panel -->
+
+      <div class="curtain__content">
+        <div id="projectContainer" class="bg-light col" data-target="#navSide" data-spy="affix" data-offset-top="0">
+
+          <div id="cardGuildQuest" data-parent="#projectContainer" class="projectcard collapse show  mb-4 w-100  mx-0 px-0">
+            <div class="row w-100 text-center py-3 deep-purple lighten-3">
+              <div class="h2 font-weight-bold mx-auto">Guild Quest</div>
             </div>
-            <div class="container-fluid">
-                <div class="collapse" title="High Level"
-                     name="erdIframe1" id="erdIframe1" height="800" frameborder="1" scrolling="no" style="width: 100%;">
-                    <object data="~/images/HotelReservations_HighLevel.pdf#Page=1&Zoom=page-width" style="width: 100%; height: 800px; border: double;">
-                        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="~/images/HotelReservations_HighLevel.pdf">Download PDF</a></p>
-                    </object>
+
+
+            <div class="row pt-3">
+              <div class="col-md-4 card-img-top float-left">
+                <div class="view overlay">
+                  <img class="figure-img img-fluid img-thumbnail flex-center" src="~/images/webp/GuildQuest.webp" alt="Screenshot of GuildQuest website" />
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="card-header">
+                  <div class="card-text">
+                    <p>
+                      Based on a project that I worked on while attending The Software Guild.
+                      The original project was developed using .Net 4.5.2 and Bootstrap 3.
+                    </p>
+                    <p>
+                      The current project is using .Net 4.7.1 and Bootstrap 4. Since the default MVC template uses Bootstrap 3, I had to convert it to Bootstrap 4.
+                    </p>
+                    <p>
+                      This project is still a work in progress and has not been optimized for mobile platforms.<br />
+                      It is best viewed from a laptop or desktop.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="col-md-2 rounded">
+
+                    <div class="my-auto h4">Features</div>
+
+                  </div>
+                  <div class="col-md-10 p-2">
+                    <div class="row flex-wrap" style="font-weight: 500;">
+                      <div class="col-md-6">ASP.Net MVC</div>
+                      <div class="col-md-6">ASP.Net API</div>
+                      <div class="col-md-6">Entity Framework 6.2</div>
+                      <div class="col-md-6">Bootstrap 4.0</div>
+                      <div class="col-md-6">HTML5/CSS3/jQuery</div>
+                      <div class="col-md-6">SQL Server 2016</div>
+                      <div class="col-md-6">Linq</div>
+                      <div class="col-md-6">Twilio - used for two party authenication</div>
+                      <div class="col-md-6">Microsoft Identity</div>
+                      <div class="col-md-6">CKEditor - inline text editor</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <div class="row w-100">
+                <div class="btn-group-lg">
+                  <a class="btn btn-primary p-1"
+                     href="https://github.com/richardturnmire/GuildQuest">
+                    Source on GitHub
+                  </a>
+                  <a class="btn btn-primary p-1" name="liveDemo1" id="liveDemo1"
+                     href="http://guildquest.richardturnmire.com" target="_blank" rel="noopener">
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="cardAngularGuildQuest" data-parent="#projectContainer" class="projectcard collapse collapsed w-100 mx-0 px-0">
+            <div class="row w-100 text-center py-3 deep-purple lighten-3">
+              <div class="h2 font-weight-bold mx-auto deep-purple lighten-3">Angular Guild Quest</div>
+            </div>
+
+
+
+            <div class="row pt-3">
+              <div class="col-md-4 card-img-top float-left">
+                <div class="view overlay">
+                  <img class="figure-img img-fluid img-thumbnail" src="~/images/webp/AngularGuildQuest.webp" alt="Screenshot of Angular GuildQuest website" />
+                </div>
+              </div>
+
+              <div class="col-md-8">
+                <div class="card-header">
+                  <div class="card-text">
+                    <p>
+                      This is the Angular version of my Guild Quest project
+                    </p>
+                    <p>
+                      The current project is using .Net Core 2.1 and Angular 6.
+                    </p>
+                    <p>
+                      This project is still a work in progress and has not been optimized for mobile platforms.<br />
+                      It is best viewed from a laptop or desktop.
+                    </p>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class=" col-md-2 rounded">
+                      <div class=" text-center">
+                        <div class=" h4">Features</div>
+                      </div>
+                    </div>
+                    <div class="col-md-10 p-2">
+                      <div class="row flex-wrap" style="font-weight: 500;">
+                        <div class="col-md-6">ASP.Net Core 2.1 API </div>
+                        <div class="col-md-6">Entity Framework Core 2.1</div>
+                        <div class="col-md-6">Angular 6</div>
+                        <div class="col-md-6">Bootstrap 4.0</div>
+                        <div class="col-md-6">HTML5/CSS3/SASS</div>
+                        <div class="col-md-6">SQL Server 2016</div>
+                        <div class="col-md-6">Linq</div>
+                        <div class="col-md-6">Twilio - used for two party authenication</div>
+                        <div class="col-md-6">Microsoft Identity</div>
+                        <div class="col-md-6">CKEditor - inline text editor</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <div class="collapse " title="Room Level"
-                     name="erdIframe2" id="erdIframe2" height="800" scrolling="no" style="width: 100%;">
-                    <object data="~/images/HotelReservations_RoomLevel.pdf#Page=1&Zoom=page-width" style="width: 100%; height: 800px; border: double;">
-                        <p> This browser does not support PDFs. Please download the PDF to view it: <a href="~/images/HotelReservations_RoomLevel.pdf">Download PDF</a></p>
-                    </object>
-                </div>
+              </div>
 
             </div>
+
+            <div class="card-footer text-black">
+              <div class="row w-100">
+                <div class="btn-group-lg">
+                  <a class="btn btn-primary"
+                     href="https://github.com/richardturnmire/GuildQuestAngular">
+                    Source on GitHub
+                  </a>
+                  <a class="btn btn-primary" name="liveDemo2" id="liveDemo2"
+                     href="http://angularguildquest.richardturnmire.com" target="_blank" rel="noopener">
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="cardHomePage" data-parent="#projectContainer" class="projectcard collapse collapsed w-100 mx-0 px-0">
+            <div class="row w-100 text-center py-3 deep-purple lighten-3">
+              <div class="h2 font-weight-bold mx-auto deep-purple lighten-3">Home Page</div>
+            </div>
+            <div class="row pt-3">
+              <div class="col-md-4 card-img-top float-left">
+                <div class="figure card-img">
+                  <img class="figure-img img-fluid img-thumbnail" src="~/images/webp/HomePage.webp" alt="image of Home Page" />
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="card-header">
+                  <p>
+                    This website was developed using ASP.Net Core 2 and Bootstrap 4<br />
+                    Converted the BootStrap 3 based Visual Studio template to BootStrap 4.
+
+                    Feb 28, 2018 - Upgraded to ASP.Net Core 2.1 with HTTPS support
+                  </p>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-2 rounded text-center">
+                      <div class="  h4">Features</div>
+                    </div>
+                    <div class="col-md-10 p-2">
+                      <div class=" row flex-wrap" style="font-weight: 500;">
+                        <div class="col-md-6">ASP.Net Core 2.0</div>
+                        <div class="col-md-6">Razor Pages</div>
+                        <div class="col-md-6">User Secrets - for storing development secrets*</div>
+                        <div class="col-md-6">Azure Key Vault - for storing production secrets*</div>
+                        <div class="col-md-6">Mailkit - for sending emails</div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="row w-100">
+                    <div class="small">* Secrets are api keys, passwords, etc.</div>
+                  </div>
+
+                </div>
+
+
+
+              </div>
+            </div>
+
+
+            <div class="card-footer">
+              <div class="row w-100">
+                <div class="btn-group-lg">
+                  <a class="btn btn-primary" href="https://github.com/richardturnmire/HomePage3">Source on GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="cardHotel" data-parent="#projectContainer" class="projectcard collapse collapsed w-100  mx-0 px-0">
+            <div class="row w-100 text-center py-3 deep-purple lighten-3">
+              <div class="h2 font-weight-bold mx-auto deep-purple lighten-3">Hotel Reservation</div>
+            </div>
+
+
+            <div class="row pt-3">
+              <div class="col-md-4">
+                <div class="figure card-img">
+                  <img class="figure-img img-fluid img-thumbnail" src="~/images/webp/Hotel Reservations.webp" alt="Hotel Reservation image" />
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="card-header" style="font-weight: 400;">
+                  <p>
+                    This is an example of a SQL Server database to be used
+                    by a hotel reservation system.
+                  </p>
+                </div>
+                <div class="card-body ">
+                  <div class="row">
+
+                    <div class=" col-md-2 text-center k-vertical-align-center ">
+                      <div class=" h4">Features</div>
+                    </div>
+                    <div class="  col-md-10 p-2 ">
+                      <div class="row flex-wrap" style="font-weight: 500;">
+                        <div class="col-md-6">SQL Server 2016</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <div class="row w-100">
+
+                <div class="btn-group-lg" role="group" aria-label="First group">
+                  <a class="btn btn-primary p-1 justify-content-center"
+                     href="https://github.com/richardturnmire/HotelReservationSystem"
+                     role="button" target="_blank" rel="noopener noreferrer">Source on GitHub</a>
+
+                  @*<a name="button1" id="button1" role="button" class="btn btn-primary text-center"
+                     onclick="toggle_button1();" href="#" data-text-original="High Level ERD" data-text-swap="Close">High Level ERD</a>
+
+                  <a name="button2" id="button2" role="button" class="btn btn-primary my-auto"
+                     onclick="toggle_button2();" href="#" data-text-original="Room Level ERD" data-text-swap="Close">Room Level ERD</a>
+                    *@
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalHighLevel">High Level ERD</button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalRoomLevel">Room Level ERD</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
+      </div>
+
+      <div class="curtain__panel curtain__panel--right deep-purple lighten-1">
+        <h1>it</h1>
+      </div> <!-- curtain__panel -->
+
+    </div> <!-- curtain__wrapper -->
+
+  </div> <!-- curtain -->
+
+  @*<div class="container-fluid">
+    <div title="High Level" name="erdIframe1" id="erdIframe1"
+         frameborder="1" scrolling="no" style="width: 100%;  display: none; height: 800px; border: double;">
+      <object data="~/images/HotelReservations_HighLevel.pdf#Page=1&Zoom=page-width" style="width: 100%; height: 100%;"></object>
     </div>
-    <div class="container bg-info">
 
+    <div title="Room Level" name="erdIframe2" id="erdIframe2"
+         frameborder="1" scrolling="no" style="width: 100%;  display: none; height: 800px; border: double;">
+      <object data="~/images/HotelReservations_RoomLevel.pdf#Page=1&Zoom=page-width" style="width: 100%; height: 100%;"></object>
     </div>
-    @section Scripts {
-        <script type="text/javascript">
-            $(document).ready(function () {
-                var first = $("#cardGuildQuest");
-                first.collapse("show");
-            });
-        </script>
-        <script type="text/javascript">
+  </div>*@
 
-            document.addEventListener('DOMContentLoaded', function () {
-                $('#button1').on('click', function () {
-                    $('#erdIframe2').collapse("hide");
-                    $('#button2')
-                        .find('[data-fa-processed]')
-                        .toggleClass('fa-angle-down', false)
-                        .toggleClass('fa-angle-up', true);
-                    $(this)
-                        .find('[data-fa-processed]')
-                        .toggleClass('fa-angle-down')
-                        .toggleClass('fa-angle-up');
-                });
+</main>
+<!--Modal: modalHighLevel-->
+<div class="modal fade" id="modalHighLevel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+     data-backdrop="true" data-fullscreen="true" data-keyboard="true">
+  <div class="modal-dialog  modal-frame modal-top modal-full-height" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="row modal-header pt-2 w-100 ">
+        <p class="heading modal-title h3 mx-auto">High Level ERD</p>
 
-                $('#button2').on('click', function () {
-                    $('#erdIframe1').collapse("hide");
-                    $('#button1')
-                        .find('[data-fa-processed]')
-                        .toggleClass('fa-angle-down', false)
-                        .toggleClass('fa-angle-up', true);
-                    $(this)
-                        .find('[data-fa-processed]')
-                        .toggleClass('fa-angle-down')
-                        .toggleClass('fa-angle-up');
-                });
+        <button type="button" class="btn close rounded float-right p-0 mr-5 h-80" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"  >&times;</span>
+        </button>
+      </div>
 
-                //$('#list-example a').on('click', function () {
-                $('#navSide a').on('click', function () {
-                    clickedBtn = $(this);
+      <!--Body-->
+      <div class="modal-body">
+        <object data="~/images/HotelReservations_HighLevel.pdf#Page=1&Zoom=page-width" style="width: 100%; height: 90vh"></object>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: modalHighLevel-->
+<!--Modal: modalRoomLevel-->
+<div class="modal fade" id="modalRoomLevel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+     data-backdrop="true" data-fullscreen="true" data-keyboard="true">
+  <div class="modal-dialog  modal-frame modal-top modal-full-height" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="row modal-header pt-2 w-100">
+        <p class="heading modal-title h3 mx-auto">Room Level ERD</p>
 
-                    $(this).parent().find('.active').removeClass('active');
-                    $(this).addClass('active');
-                    ;
+        <button type="button" class="btn close rounded float-right p-0 mr-5 h-80" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="dark-text">&times;</span>
+        </button>
+      </div>
 
+      <!--Body-->
+      <div class="modal-body">
+        <object data="~/images/HotelReservations_RoomLevel.pdf#Page=1&Zoom=page-width" style="width: 100%; height: 90vh"></object>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: modalRoomLevel-->
 
-                    var target;
-                    dataFullList = clickedBtn.data();
-                    $.each(dataFullList, function (index, value) {
-                        if (index == "target") {
-                            target = value.substring(1);
-                        }
-                    });
-                    $(".project").each(function (index, value) {
-                        if (value.id == target)
-                            $('#' + value.id).collapse("show");
-                        else
-                            $('#' + value.id).collapse("hide");
-                    });
-                });
-            });
+@section Scripts {
 
-        </script>
-
-        <script type="text/javascript">
-            //   jQuery(document).ready(function($){
-            $(document).ready(function () {
-                var url = window.location.href;
-
-                // Will only work if string in href matches with location
-                $('.nav a[href="' + url + '"]').addClass('active');
-
-                // Will also work for relative and absolute hrefs
-                $('.nav a').filter(function () {
-                    return this.href == url;
-                }).addClass('active');
-            });
-
-        </script>
+  <script type="text/javascript">
+    function sleep(time) {
+      return new Promise((resolve) => setTimeout(resolve, time));
     }
- 
 
+    $(document).ready(function () {
+
+      $('#navSide a').on('click', function (event) {
+        var overall = document.querySelector('input[id="curtainToggle"]');
+        overall.checked = true;
+
+        var clickedBtn = $(this);
+        clickedBtn.parent().find('.active').removeClass('active');
+        clickedBtn.addClass('active');
+
+        sleep(1500).then(() => {
+          overall.checked = false;
+        });
+      });
+    });
+
+    //function toggle_button1() {
+    //  var el = $('#button1');
+    //  var ek = $('#button2');
+    //  toggle_visibility('erdIframe1', 'erdIframe2');
+    //  el.text() === el.data("text-swap")
+    //    ? el.text(el.data("text-original"))
+    //    : el.text(el.data("text-swap"));
+    //  ek.text(ek.data("text-original"));
+    //}
+
+    //function toggle_button2() {
+    //  var el = $('#button2');
+    //  var ek = $('#button1');
+    //  toggle_visibility('erdIframe2', 'erdIframe1');
+    //  el.text() === el.data("text-swap")
+    //    ? el.text(el.data("text-original"))
+    //    : el.text(el.data("text-swap"));
+    //  ek.text(ek.data("text-original"));
+    //}
+
+    //function toggle_visibility(id, id2) {
+    //  var e = document.getElementById(id);
+    //  var f = document.getElementById(id2);
+
+    //  f.style.display = 'none';
+
+    //  if (e.style.display === 'block')
+    //    e.style.display = 'none';
+    //  else
+    //    e.style.display = 'block';
+    //}
+
+  </script>
+
+}

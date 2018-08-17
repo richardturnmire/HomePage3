@@ -5,7 +5,7 @@ namespace HomePage3.Pages
 {
     public class ErrorModel : PageModel
     {
-        public string RequestId { get; set; }
+        public string RequestId { get; private set; }
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 

@@ -1,1 +1,1 @@
-﻿// Write your Javascript code.
+$(document).ready(function(){var a=window.location.href;$('#navbarList a[href="'+a+'"]').addClass("active"),$("#navbarList a").filter(function(){return this.href===a}).addClass("active")});

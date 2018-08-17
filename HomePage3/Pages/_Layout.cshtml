@@ -1,104 +1,163 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="full-height">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="Richard Turnmire's profile website">
+  <META NAME="KEYWORDS" CONTENT="software developer, .Net, resume, examples">
 
-    <title>@ViewData["Title"] Richard Turnmire</title>
+  <title>@ViewData["Title"] Richard Turnmire</title>
+  <style type="text/css" media="screen, print">
+    @@import url("https://fonts.googleapis.com/css?family=Roboto|Pacifico");
 
-    <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    </environment>
+    @@font-face {
+      font-family: 'Font Awesome 5 Brands';
+      font-display: swap;
+      font-style: normal;
+      font-weight: normal;
+      src: local("./lib/webfonts/fa-brands-400.svg#fontawesome") format("svg");
+      src: local("./lib/webfonts/fa-brands-400.woff2") format("woff2");
+      src: local("./lib/webfonts/fa-brands-400.woff") format("woff");
+      src: local("./lib/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype");
+      src: local("./lib/webfonts/fa-brands-400.ttf") format("truetype");
+    }
 
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-    </environment>
+    @@font-face {
+      font-family: 'Roboto Bold';
+      font-display: swap;
+      font-style: normal;
+      font-weight: normal;
+      src: local("./lib/font/Roboto-Bold.woff2") format("woff2");
+      src: local("./lib/font/Roboto-Bold.woff") format("woff");
+      src: local("./lib/font/Roboto-Bold.ttf") format("truetype");
+    }
 
-    <link rel="stylesheet" href="~/css/Shards/shards.min.css" />
-    <link rel="stylesheet" href="~/css/MyCSS.css" />
+    @@font-face {
+      font-family: 'Roboto Light';
+      font-display: swap;
+      font-style: normal;
+      font-weight: normal;
+      src: local("./lib/font/Roboto-Light.woff2") format("woff2");
+      src: local("./lib/font/Roboto-Light.woff") format("woff");
+      src: local("./lib/font/Roboto-Light.ttf") format("truetype");
+    }
 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
-    <script>
+    @@font-face {
+      font-family: 'Roboto Medium';
+      font-display: swap;
+      font-style: normal;
+      font-weight: normal;
+      src: local("./lib/font/Roboto-Medium.woff2") format("woff2");
+      src: local("./lib/font/Roboto-Medium.woff") format("woff");
+      src: local("./lib/font/Roboto-Medium.ttf") format("truetype");
+    }
+  </style>
+  <link type="text/css" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" crossorigin="anonymous">
+   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+
+  <environment include="Development">
+    <link async rel="stylesheet" href="~/css/custom_Bootstrap.min.css" />
+    <link async rel="stylesheet" href="~/css/custom_MDBootstrap.min.css" />
+    <link async rel="stylesheet" href="~/css/SiteScss.min.css"/>
+  </environment>
+  <environment exclude="Development">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="~/css/SiteScss.css" />
+   
+  </environment>
+
+  @*<script>
         FontAwesomeConfig = { searchPseudoElements: true };
-    </script>
-
+    </script>*@
 </head>
 
-<body class="container-fluid body-content mx-0 px-0  btn-light">
-    <nav class="container navbar nav-pills navbar-expand-md p-0 navbar-fixed-top rounded-bottom">
-        <button class="navbar-toggler ml-4 pl-2 py-1 hidden-sm-up pull-left" type="button" data-toggle="collapse" data-target="#navbarList" aria-controls="navbarList" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fas fa-bars fa-3x pull-left"></span>
-        </button>
+<body class="pt-5" style="background-color: #5A3477;">
+  <header>
+    <nav id="topNav" class="navbar fixed-top navbar-expand-lg  rounded-bottom navbar-dark w-100">
 
-        <a asp-page="/Index" class="navbar-brand py-0 mt-1">
-            <h4 class="pb-0 mt-1">Richard Turnmire</h4> 
-            <h5 class="pb-0 mt-1">Software Developer for Hire</h5>
-        </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarList" aria-controls="navbarList" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fa fa-bars fa-2x my-auto"></span>
+      </button>
 
-        <div class="collapse navbar-collapse pull-left p-3" id="navbarList">
-            <nav class="nav nav-outlined-pills mx-auto justify-content-between" id="pills-tab">
-                <a class="nav-link text-center" asp-page="/Index" id="pills-home-tab"
-                   aria-controls="pills-home" aria-selected="true">Home</a>
-                <a class="nav-link text-center" asp-page="/Resume" id="pills-resume-tab"
-                   aria-controls="pills-resume" aria-selected="false">Resume</a>
-                <a class="nav-link text-center" asp-page="/Projects" id="pills-projects-tab"
-                   aria-controls="pills-projects" aria-selected="false">Projects</a>
-                <a class="nav-link text-center" asp-page="/Favorites" id="pills-favorites-tab"
-                   aria-controls="pills-favorites" aria-selected="false">Favorites</a>
-                <a class="nav-link text-center" asp-page="/Contact" id="pills-contact-tab"
-                   aria-controls="pills-contact" aria-selected="false">Contact</a>
-            </nav>
+      <a asp-page="/Index" class="navbar-brand pl-3 float-right float-sm-left">
+        <h4 class="pb-0 mt-1 animated fadeIn">Richard Turnmire</h4>
+        <h5 class="pb-0 mt-1 animated fadeIn">Software Developer for Hire</h5>
+      </a>
+
+      <div class="collapse navbar-collapse w-100 " id="navbarList">
+        <div class="nav  nav-pills   flex-column flex-lg-row float-left w-75 justify-content-start" id="pills-tab">
+
+          <a asp-page="/Index" class="nav-item nav-link text-white " id="pills-home-tab"
+             aria-controls="pills-home" aria-selected="true"><i class="fas fa-home fa-2x bg-transparent"></i><span class="sr-only">(current)</span></a>
+
+          <a asp-page="/Resume" class="nav-item nav-link text-white" id="pills-resume-tab"
+             aria-controls="pills-resume" aria-selected="false">Resume</a>
+
+          <a asp-page="/Projects" class="nav-item nav-link text-white" id="pills-projects-tab"
+             aria-controls="pills-projects" aria-selected="false">Projects</a>
+
+          <a asp-page="/Favorites" class="nav-item nav-link text-white" id="pills-favorites-tab"
+             aria-controls="pills-favorites" aria-selected="false">Favorites</a>
+
+          <a asp-page="/Contact" class="nav-item nav-link text-white" id="pills-contact-tab"
+             aria-controls="pills-contact" aria-selected="false">Contact</a>
+
         </div>
+
+        <div class="btn-group btn-block mt-3  float-right deep-purple lighten-3  p-3 my-auto w-auto" id="iconGroup">
+
+          <span title="Open email client to send message to Richard">
+            <a class="mr-4 mainlink" href="mailto:richard@richarturnmire.com" rel="noopener noreferrer" target="_top" alt="Link to create email to send to Richard">
+              <i class="fas fa-envelope fa-2x mr-2 white-ic"></i>
+            </a>
+          </span>
+
+          <span title="Link to Richard's LinkedIn profile">
+            <a class="mr-4 mainlink" href="http://www.linkedin.com/in/richardturnmire" rel="noopener noreferrer" alt="Link to Richard's LinkedIn profile">
+              <i class="fab fa-linkedin fa-2x mr-2 blue-ic text-white"></i>
+            </a>
+          </span>
+
+          <span title="Link to Richard's Twitter profile">
+            <a class="mr-4 mainlink" href="https://twitter.com/richardturnmire?ref_src=twsrc%5Etfw" rel="noopener noreferrer" alt="Richard's Twitter profile">
+              <i class="fab fa-twitter blue-ic fa-2x mr-2"></i>
+            </a>
+          </span>
+
+          <span title="Link to Richard's GitHub repository">
+            <a class="mr-4 mainlink" href="http://www.github.com/richardturnmire" rel="noopener noreferrer" alt="Link to downloadable Richard's GitHub repository">
+              <i class="fab fa-github-alt fa-2x mr-2 black-ic"></i>
+            </a>
+          </span>
+
+        </div>
+      </div>
+
     </nav>
+  </header>
+  
 
-    @RenderBody()
+      @RenderBody()
 
-    <footer class="rounded-bottom">
-        <hr />
-        <p>&copy; 2018 - Richard Turnmire</p>
+    
+    <footer class="container-fluid page-footer rounded-bottom p-4">
+      <h5><span><i class="fa fa-copyright"></i></span> 2018 - Richard Turnmire</h5>
     </footer>
-
-    <environment include="Development">
-        <script src="~/lib/jquery/jquery-3.2.1.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous">
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-                crossorigin="anonymous">
-        </script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous">
-        </script>
-    </environment>
-
-    <script src="~/js/site.min.js" asp-append-version="true"></script>
-    <script src="~/js/Shards/shards.min.js"></script>
-    <script type="text/javascript">
-        //   jQuery(document).ready(function($){
-        $(document).ready(function () {
-            var url = window.location.href;
-
-            // Will only work if string in href matches with location
-            $('.nav a[href="' + url + '"]').addClass('active');
-
-            // Will also work for relative and absolute hrefs
-            $('.nav a').filter(function () {
-                return this.href == url;
-            }).addClass('active');
-        });
-
-    </script>
+  
 
 
-    @RenderSection("Scripts", required: false)
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js" crossorigin="anonymous"></script>
+  <script async src="~/js/site.js"></script>
+
+  @RenderSection("Scripts", required: false)
 </body>
 </html>

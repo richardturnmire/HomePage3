@@ -1,84 +1,58 @@
 ﻿@page
-@using HomePage3.Pages
-@model HomePage3.Pages.IndexModel
+@model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
- 
-    <div id="homepage" class="container  my-auto btn-light">
-        <div class="row mt-1 py-2 px-0 mx-0">
-            <div class="card col-md-4 py-2">
-                <div class="card-header">
-                    <div class="card-img ">
-                        <img src="~/images/Profile.jpg" alt="Picture of Richard Turnmire" class="img-fluid img-thumbnail" style="width: 100%;" />
-                    </div>
-                </div>
-                <div class="card-body   mx-0 pr-1">
-                    <div class="row">
-                        <span title="Richard's phone number">
-                            <a href="tel:+15024173849" alt="Link to Richard's phone number">
-                                <i class="fas fa-phone fa-2x"></i>
-                                (502) 417-3849
-                            </a>
-                        </span>
-                    </div>
-                    <div class="row">
-                        <span title="Open email client to send message to Richard">
-                            <a href="mailto:richard@richarturnmire.com" target="_top" alt="Link to create email to send to Richard" aria-describedby="Link to create email to send to Richard">
-                                <i class="fas fa-envelope fa-2x"></i>
-                                richard@richardturnmire.com
-                            </a>
-                        </span>
-                    </div>
-                    <div class="row">
-                        <span title="Link to Richard's LinkedIn profile">
-                            <a href="http://www.linkedin.com/in/richardturnmire" alt="Link to Richard's LinkedIn profile" aria-describedby="Link to Richard's LinkedIn profile">
-                                <i class="fab fa-linkedin fa-2x"></i>
-                                LinkedIn
-                            </a>
-                        </span>
-                    </div>
-                    <div class="row">
-                        <span title="Link to Richard's Twitter profile">
-                            <a href="https://twitter.com/richardturnmire?ref_src=twsrc%5Etfw" alt="Richard's Twitter profile" aria-describedby="Link to Richard's Twitter profile">
-                                <i class="fab fa-twitter fa-2x"></i>
-                                Twitter
-                            </a>
-                        </span>
-                    </div>
-                    <div class="row">
-                        <span title="Link to Richard's GitHub repository">
-                            <a href="http://www.github.com/richardturnmire" alt="Link to downloadable Richard's GitHub repository" aria-describedby="Link to Richard's GitHub repository">
-                                <i class="fab fa-github-alt fa-2x"></i>
-                                GitHub
-                            </a>
-                        </span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="card col-md py-2">
-                <div class="card-header p-1 h-50">
-                    Hello and welcome to my website.
-                </div>
+<main id="homepage" class="container pt-5 mt-5">
+  <div class="row mt-1 py-2 px-0 mx-0">
+    <div class="card col-md-4 py-2">
+      <div class="card-header">
+        <div class="card-img w-100 p-0">
+          <img src="~/images/webp/Profile.webp" alt="Richard's Profile picture" class="img-fluid " style="width: 100%; padding: 0;" />
+        </div>
+      </div>
 
-                <div class="card-footer mt-auto">
-                    <hr />
-                    <div class="row">
-                        <div name="todaysQuote">
-                            <blockquote class="blockquote">
-                                <script type="text/javascript" src="https://www.brainyquote.com/link/quotebr.js"></script>
-                            </blockquote>
-                            <small><i><a href="https://www.brainyquote.com/quote_of_the_day" target="_blank" rel="nofollow">more Quotes</a></i></small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row my-3 marquee ">
-                <h4 class="d-none d-lg-block">This site is a work in progress. Please check back regularly for updates.</h4>
-                <h5 class="d-block d-lg-none d-xl-none">This site is a work in progress. Please check back regularly for updates.</h5>
-            </div>
-        </div>
+      <div class="row pl-3">
+        <span title="Richard's phone number">
+          <a href="tel:+15024173849" alt="Link to Richard's phone number" class="mainlink">
+            <i class="fas fa-phone  "></i>
+            (502) 417-3849
+          </a>
+        </span>
+      </div>
+      <div class="row pl-3">
+        <span title="Open email client to send message to Richard">
+          <a href="mailto:richard@richarturnmire.com" rel="noopener noreferrer" target="_top" alt="Link to create email to send to Richard" class="mainlink">
+            <i class="fas fa-envelope  "></i>
+            richard@richardturnmire.com
+          </a>
+        </span>
+      </div>
+
     </div>
- 
+    
+      <div class="card-body p-1  bg-white">
+        Hello and welcome to my website.
+      </div>
+     
+    <div class="card-footer bg-light border-top border-dark w-100">
+
+      <div class="row">
+        <blockquote class="blockquote">
+          <script src="https://www.brainyquote.com/link/quotebr.js"></script>
+
+          <p>
+            <small><i><a href="https://www.brainyquote.com/quote_of_the_day" target="_blank" rel="nofollow noopener noreferrer" style="background-color: whitesmoke; color: black; font-weight: 500;">more Quotes</a></i></small>
+          </p>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+    <div class="row my-3 marquee ">
+        <h4 class="d-none d-lg-block">This site is a work in progress. Please check back regularly for updates.</h4>
+        <h5 class="d-block d-lg-none d-xl-none">This site is a work in progress. Please check back regularly for updates.</h5>
+    </div>
+</main>
+
+

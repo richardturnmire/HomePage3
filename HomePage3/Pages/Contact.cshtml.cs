@@ -1,27 +1,20 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Net;
-using HomePage3.Utils;
-using MailKit.Net.Smtp;
+﻿using HomePage3.Utils;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Protocols;
-using MimeKit;
-using MimeKit.Text;
+using System.ComponentModel.DataAnnotations;
 
 namespace HomePage3.Pages
 {
     public class ContactModel : PageModel
     {
-        private IConfiguration Configuration;
-        private IEmailService _emailService;
-        private IEmailConfiguration _emailConfiguration;
+        private readonly IConfiguration _configuration;
+        private readonly IEmailService _emailService;
+        private readonly IEmailConfiguration _emailConfiguration;
 
-        public ContactModel(IConfiguration config,  IEmailService emailService, IEmailConfiguration emailConfiguration)
+        public ContactModel (IConfiguration config, IEmailService emailService, IEmailConfiguration emailConfiguration)
         {
-            Configuration = config;
+            _configuration = config;
             _emailService = emailService;
             _emailConfiguration = emailConfiguration;
         }
@@ -43,47 +36,49 @@ namespace HomePage3.Pages
         [Required]
         public string Subject { get; set; }
 
-        [BindProperty]
-        public Contact Contact { get; set; }
+        [BindProperty] private Contact Contact { get; set; }
 
-        public void OnGet()
+        public void OnGet ()
         {
             // Message = "Your contact page.";
         }
 
         [HttpPost]
-        public IActionResult OnPost()
+        public IActionResult OnPost ()
         {
-            if (!ModelState.IsValid) return Page();
-            
-            var emailMessage = new EmailMessage
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            EmailMessage emailMessage = new EmailMessage
             {
                 Content = Contact.Message,
                 Subject = Contact.Subject,
             };
-            
+
             emailMessage.FromAddresses.Add(new EmailAddress()
             {
                 Name = Contact.Name,
                 Address = Contact.Email
             });
-            
+
             emailMessage.ToAddresses.Add(new EmailAddress()
             {
-                Name = "Message from web", 
-                Address = _emailConfiguration.SmtpUsername   
+                Name = "Message from web",
+                Address = _emailConfiguration.SmtpUsername
             });
-            
+
             emailMessage.CcAddresses.Add(new EmailAddress()
             {
                 Name = Contact.Name,
                 Address = Contact.Email
             });
-            
+
             _emailService.Send(emailMessage);
-            
+
             return RedirectToPage("Index");
-            
+
         }
     }
 
